@@ -9345,6 +9345,10 @@ h6 {
   left: 50%;
 }
 
+.portfolio_details_area {
+  color: #000;
+}
+
 .portfolio_details_inner .row {
   margin-bottom: 65px;
 }
