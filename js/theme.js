@@ -1,4 +1,4 @@
-(function($) {
+(function ($) {
 	'use strict';
 
 	var nav_offset_top = $('header').height() + 50;
@@ -9,7 +9,7 @@
 	//* Navbar Fixed
 	function navbarFixed() {
 		if ($('.header_area').length) {
-			$(window).scroll(function() {
+			$(window).scroll(function () {
 				var scroll = $(window).scrollTop();
 				if (scroll >= nav_offset_top) {
 					$('.header_area').addClass('navbar_fixed');
@@ -33,8 +33,8 @@
 	/* ---------------------------------------------
             Isotope js Starts
          --------------------------------------------- */
-	$(window).on('load', function() {
-		$('.portfolio-filter ul li').on('click', function() {
+	$(window).on('load', function () {
+		$('.portfolio-filter ul li').on('click', function () {
 			$('.portfolio-filter ul li').removeClass('active');
 			$(this).addClass('active');
 
@@ -98,213 +98,40 @@
 	testimonials_slider();
 
 	/*----------------------------------------------------*/
-	/*  Google map js
-    /*----------------------------------------------------*/
+	/*  Confetti JS
+	/*----------------------------------------------------*/
 
-	if ($('#mapBox').length) {
-		var $lat = $('#mapBox').data('lat');
-		var $lon = $('#mapBox').data('lon');
-		var $zoom = $('#mapBox').data('zoom');
-		var $marker = $('#mapBox').data('marker');
-		var $info = $('#mapBox').data('info');
-		var $markerLat = $('#mapBox').data('mlat');
-		var $markerLon = $('#mapBox').data('mlon');
-		var map = new GMaps({
-			el: '#mapBox',
-			lat: $lat,
-			lng: $lon,
-			scrollwheel: false,
-			scaleControl: true,
-			streetViewControl: false,
-			panControl: true,
-			disableDoubleClickZoom: true,
-			mapTypeControl: false,
-			zoom: $zoom,
-			styles: [
-				{
-					featureType: 'water',
-					elementType: 'geometry.fill',
-					stylers: [
-						{
-							color: '#dcdfe6'
-						}
-					]
-				},
-				{
-					featureType: 'transit',
-					stylers: [
-						{
-							color: '#808080'
-						},
-						{
-							visibility: 'off'
-						}
-					]
-				},
-				{
-					featureType: 'road.highway',
-					elementType: 'geometry.stroke',
-					stylers: [
-						{
-							visibility: 'on'
-						},
-						{
-							color: '#dcdfe6'
-						}
-					]
-				},
-				{
-					featureType: 'road.highway',
-					elementType: 'geometry.fill',
-					stylers: [
-						{
-							color: '#ffffff'
-						}
-					]
-				},
-				{
-					featureType: 'road.local',
-					elementType: 'geometry.fill',
-					stylers: [
-						{
-							visibility: 'on'
-						},
-						{
-							color: '#ffffff'
-						},
-						{
-							weight: 1.8
-						}
-					]
-				},
-				{
-					featureType: 'road.local',
-					elementType: 'geometry.stroke',
-					stylers: [
-						{
-							color: '#d7d7d7'
-						}
-					]
-				},
-				{
-					featureType: 'poi',
-					elementType: 'geometry.fill',
-					stylers: [
-						{
-							visibility: 'on'
-						},
-						{
-							color: '#ebebeb'
-						}
-					]
-				},
-				{
-					featureType: 'administrative',
-					elementType: 'geometry',
-					stylers: [
-						{
-							color: '#a7a7a7'
-						}
-					]
-				},
-				{
-					featureType: 'road.arterial',
-					elementType: 'geometry.fill',
-					stylers: [
-						{
-							color: '#ffffff'
-						}
-					]
-				},
-				{
-					featureType: 'road.arterial',
-					elementType: 'geometry.fill',
-					stylers: [
-						{
-							color: '#ffffff'
-						}
-					]
-				},
-				{
-					featureType: 'landscape',
-					elementType: 'geometry.fill',
-					stylers: [
-						{
-							visibility: 'on'
-						},
-						{
-							color: '#efefef'
-						}
-					]
-				},
-				{
-					featureType: 'road',
-					elementType: 'labels.text.fill',
-					stylers: [
-						{
-							color: '#696969'
-						}
-					]
-				},
-				{
-					featureType: 'administrative',
-					elementType: 'labels.text.fill',
-					stylers: [
-						{
-							visibility: 'on'
-						},
-						{
-							color: '#737373'
-						}
-					]
-				},
-				{
-					featureType: 'poi',
-					elementType: 'labels.icon',
-					stylers: [
-						{
-							visibility: 'off'
-						}
-					]
-				},
-				{
-					featureType: 'poi',
-					elementType: 'labels',
-					stylers: [
-						{
-							visibility: 'off'
-						}
-					]
-				},
-				{
-					featureType: 'road.arterial',
-					elementType: 'geometry.stroke',
-					stylers: [
-						{
-							color: '#d6d6d6'
-						}
-					]
-				},
-				{
-					featureType: 'road',
-					elementType: 'labels.icon',
-					stylers: [
-						{
-							visibility: 'off'
-						}
-					]
-				},
-				{},
-				{
-					featureType: 'poi',
-					elementType: 'geometry.fill',
-					stylers: [
-						{
-							color: '#dadada'
-						}
-					]
-				}
-			]
-		});
-	}
+	var confettiSettings = {
+		target : "confetti",
+		"max":"30",
+		"size":"1",
+		"animate":true,
+		"props":[
+			"circle",
+			"square",
+			"triangle",
+			"line",
+			{
+				"type":"svg",
+				"src":"img/star.svg",
+				"size":20,
+				"weight":1
+			}
+		],
+		"colors":[
+			[165,104,246],
+			[230,61,135],
+			[0,199,228],
+			[253,214,126]
+		],
+		"clock":"15",
+		"rotate":true,
+		"width":"1440",
+		"height":"709",
+		"start_from_edge":false,
+		"respawn":true
+	};
+	var confetti = new ConfettiGenerator(confettiSettings);
+	confetti.render();
+
 })(jQuery);
