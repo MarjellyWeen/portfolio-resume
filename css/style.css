@@ -6475,11 +6475,6 @@ button:focus {
     height: auto;
   }
 }
-@media (max-width: 991px) {
-  .home_banner_area .banner_inner .home_right_img {
-    display: none;
-  }
-}
 .home_banner_area .banner_inner .col-lg-7 {
   vertical-align: middle;
   align-self: center;
@@ -9043,11 +9038,6 @@ h6 {
   .about_area .about_img img {
     max-width: 100%;
     height: auto;
-  }
-}
-@media (max-width: 991px) {
-  .about_area .about_img {
-    display: none;
   }
 }
 
