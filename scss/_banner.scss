@@ -72,15 +72,15 @@
 .banner_area {
 	position: relative;
 	z-index: 1;
-	min-height: 485px;
+	min-height: 310px;
 	@media (max-width: 1199px) {
 		min-height: 350px;
 	}
 	.banner_inner {
 		position: relative;
-		overflow: hidden;
+		overflow: visible;
 		width: 100%;
-		min-height: 485px;
+		min-height: 310px;
 		background: url(../img/banner/common-banner.png) no-repeat right bottom;
 		background-size: 90% 85%;
 		width: 98%;
