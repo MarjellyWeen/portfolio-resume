@@ -13,6 +13,12 @@
         border: 0px;
         border-radius: 0px;
         width: 100%;
+        i{
+            color: $primary-color;
+        }
+        i:hover{
+            color: black;
+        }
         .nav {
             .nav-item {
                 margin-right: 45px;
