@@ -32,6 +32,12 @@
 			margin-top: 35px;
 			text-transform: uppercase;
 		}
+		i{
+			color: $primary-color;
+		}
+		i:hover{
+			color: black;
+		}
 	}
 	.footer_social {
 		text-align: center;

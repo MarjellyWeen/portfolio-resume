@@ -6309,6 +6309,12 @@ button:focus {
   border-radius: 0px;
   width: 100%;
 }
+.header_area .navbar i {
+  color: #74429b;
+}
+.header_area .navbar i:hover {
+  color: black;
+}
 .header_area .navbar .nav .nav-item {
   margin-right: 45px;
 }
@@ -7470,19 +7476,17 @@ button:focus {
   margin-top: 80px;
 }
 
-.contact_info .info_item {
-  position: relative;
-  padding-left: 45px;
+.contact_info i {
+  color: #74429b;
 }
 .contact_info .info_item i {
   position: absolute;
-  left: 0;
   top: 0;
   font-size: 20px;
   line-height: 24px;
   font-weight: 600;
 }
-.contact_info .info_item h6 {
+.contact_info .info_item h3 {
   font-size: 16px;
   line-height: 24px;
   color: "Roboto", sans-serif;
@@ -7490,7 +7494,7 @@ button:focus {
   margin-bottom: 0px;
   color: #000000;
 }
-.contact_info .info_item h6 a {
+.contact_info .info_item h3 a {
   color: #000000;
 }
 .contact_info .info_item p {
@@ -10098,6 +10102,12 @@ canvas#confetti {
   color: #000000;
   margin-top: 35px;
   text-transform: uppercase;
+}
+.footer_area .footer_logo i {
+  color: #74429b;
+}
+.footer_area .footer_logo i:hover {
+  color: black;
 }
 .footer_area .footer_social {
   text-align: center;

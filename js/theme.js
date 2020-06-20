@@ -52,7 +52,18 @@
 					columnWidth: '.all'
 				}
 			});
+			$('#pills-tab a').on('shown.bs.tab', function (e) {
+				console.log('Hello world');
+				$('.portfolio-grid').isotope({
+					itemSelector: '.all',
+					percentPosition: true,
+					masonry: {
+						columnWidth: '.all'
+					}
+			  });
+			});
 		}
+
 	});
 
 	/*----------------------------------------------------*/
@@ -101,6 +112,8 @@
 	/*  Confetti JS
 	/*----------------------------------------------------*/
 
+	var confetti = document.getElementById("confetti");
+	
 	var confettiSettings = {
 		target : "confetti",
 		"max":"30",
